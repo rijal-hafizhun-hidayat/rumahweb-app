@@ -61,55 +61,55 @@ const toUser = () => {
       <div class="bg-white mt-10 px-4 py-6 rounded shadow-md space-y-4 overflow-x-auto">
         <div>
           <InputLabel>name</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.name" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.name" />
         </div>
         <div>
           <InputLabel>email</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.email" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.email" />
         </div>
         <div>
           <InputLabel>phome</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.phone" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.phone" />
         </div>
         <div>
           <InputLabel>username</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.username" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.username" />
         </div>
         <div>
           <InputLabel>website</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.website" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.website" />
         </div>
         <div>
           <InputLabel>email</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.email" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.email" />
         </div>
         <div>
           <InputLabel>city</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.address.city" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.address.city" />
         </div>
         <div>
           <InputLabel>street</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.address.street" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.address.street" />
         </div>
         <div>
           <InputLabel>suite</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.address.suite" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.address.suite" />
         </div>
         <div>
           <InputLabel>zipcode</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.address.zipcode" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.address.zipcode" />
         </div>
         <div>
           <InputLabel>name company</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.company.name" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.company.name" />
         </div>
         <div>
           <InputLabel>bs company</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.company.bs" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.company.bs" />
         </div>
         <div>
           <InputLabel>Catch Phrase</InputLabel>
-          <TextInput class="block w-full mt-1" v-model="user.company.catchPhrase" />
+          <TextInput disabled class="block w-full mt-1" v-model="user.company.catchPhrase" />
         </div>
         <div>
           <PrimaryButton :disabled="isLoading" @click="toUser()" type="button">back</PrimaryButton>
