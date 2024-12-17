@@ -85,7 +85,10 @@ const searchUserByName = computed(() => {
               <td class="border-t items-center px-6 py-4">
                 {{ index + 1 }}
               </td>
-              <td class="border-t items-center px-6 py-4">
+              <td
+                class="border-t items-center px-6 py-4 hover:text-slate-500 cursor-pointer"
+                @click="toDetailUser(user.id)"
+              >
                 {{ user.name }}
               </td>
               <td class="border-t items-center px-6 py-4">
@@ -98,7 +101,7 @@ const searchUserByName = computed(() => {
               </td>
               <td class="border-t items-center px-6 py-4 flex justify-start space-x-4">
                 <div>
-                  <PrimaryButton @click="toDetailUser(user.id)" type="button">Ubah</PrimaryButton>
+                  <PrimaryButton @click="toDetailUser(user.id)" type="button">Detail</PrimaryButton>
                 </div>
               </td>
             </tr>
