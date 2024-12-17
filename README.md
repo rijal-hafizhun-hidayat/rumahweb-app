@@ -4,7 +4,7 @@ Install this project bun
 
 ```bash
   git clone https://github.com/rijal-hafizhun-hidayat/rumahweb-app.git
-  cd uni-voucher
+  cd rumahweb-app
   bun install
 ```
 
