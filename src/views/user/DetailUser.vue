@@ -57,8 +57,12 @@ const toUser = () => {
 </script>
 <template>
   <DashboardLayout>
-    <div v-if="user" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div v-if="user && !isLoading" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-white mt-10 px-4 py-6 rounded shadow-md space-y-4 overflow-x-auto">
+        <div>
+          <h1 class="font-semibold mb-2">Profile</h1>
+          <hr />
+        </div>
         <div>
           <InputLabel>name</InputLabel>
           <TextInput disabled class="block w-full mt-1" v-model="user.name" />
@@ -84,6 +88,10 @@ const toUser = () => {
           <TextInput disabled class="block w-full mt-1" v-model="user.email" />
         </div>
         <div>
+          <h1 class="font-semibold mb-2">Address</h1>
+          <hr />
+        </div>
+        <div>
           <InputLabel>city</InputLabel>
           <TextInput disabled class="block w-full mt-1" v-model="user.address.city" />
         </div>
@@ -100,6 +108,10 @@ const toUser = () => {
           <TextInput disabled class="block w-full mt-1" v-model="user.address.zipcode" />
         </div>
         <div>
+          <h1 class="font-semibold mb-2">Company</h1>
+          <hr />
+        </div>
+        <div>
           <InputLabel>name company</InputLabel>
           <TextInput disabled class="block w-full mt-1" v-model="user.company.name" />
         </div>
@@ -114,6 +126,11 @@ const toUser = () => {
         <div>
           <PrimaryButton :disabled="isLoading" @click="toUser()" type="button">back</PrimaryButton>
         </div>
+      </div>
+    </div>
+    <div v-else class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white mt-10 px-4 py-6 rounded shadow-md space-y-4 overflow-x-auto">
+        <p>loading ...</p>
       </div>
     </div>
   </DashboardLayout>
