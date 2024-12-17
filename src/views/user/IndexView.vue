@@ -4,6 +4,7 @@ import PrimaryButton from '@/components/base/PrimaryButton.vue'
 import api from '@/plugins/api'
 import type { AxiosError } from 'axios'
 import { onMounted, ref, type Ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 interface User {
   email: string
@@ -21,6 +22,7 @@ interface Address {
   zipcode: string
 }
 
+const router = useRouter()
 const users: Ref<User[]> = ref([])
 const isLoading: Ref<boolean> = ref(false)
 
@@ -40,7 +42,12 @@ onMounted(async () => {
 })
 
 const toDetailUser = (userId: number) => {
-  console.log(userId)
+  router.push({
+    name: 'user.detail',
+    params: {
+      userId: userId,
+    },
+  })
 }
 </script>
 <template>
