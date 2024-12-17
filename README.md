@@ -35,5 +35,5 @@ flow code
 link rumahweb-app
 
 ```bash
-  https://rumahweb-app.vercel.app/user/1
+  https://rumahweb-app.vercel.app
 ```
