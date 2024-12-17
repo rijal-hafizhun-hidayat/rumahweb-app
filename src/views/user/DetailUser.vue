@@ -39,7 +39,6 @@ onMounted(async () => {
   try {
     isLoading.value = true
     const result = await api.get(`users/${route.params.userId}`)
-    console.log(result)
     user.value = result.data as User
   } catch (error) {
     const err = error as AxiosError
