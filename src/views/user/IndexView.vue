@@ -32,9 +32,7 @@ onMounted(async () => {
   try {
     isLoading.value = true
     const result = await api.get('users')
-    console.log(result)
     users.value = result.data as User[]
-    console.log(users.value)
   } catch (error) {
     const err = error as AxiosError
     console.log(err)
